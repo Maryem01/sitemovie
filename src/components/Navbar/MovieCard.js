@@ -1,35 +1,35 @@
-import { Button } from "bootstrap";
+import { Link } from "react-router-dom";
 
   
 const MovieCard = ({ movie }) => {
   return (
+    
+
+
+    <Link to={`/movies/${movie.id}`}>
+    
     <div className="cards">
       
-        
-       <div className ="photo"><img src={movie.posterurl} alt=""/></div>
-         
-       
-          
+      
+       <div className ="photo">
     
-        
-        
+       <img src={movie.posterurl} alt="" />
+      
        <div className="info">
-        <i class="fa-solid fa-circle-play"></i>
-         <i class="fa-solid fa-thumbs-up"></i>
-         <i class="fa-solid fa-thumbs-down"></i>
 
-          <button style={{ 
-    backgroundColor: "Transparent",
-    color: "white",
-    fontSize: "12px",
-    borderRadius: "8px",
-    width:"100px",
-    height:"40px",
-    marginLeft:"55px"
-    }}><p style={{ fontSize: "13.5px" }}>Learn More </p></button>
-        
+      
+        <i className="fa-solid fa-circle-play"></i>
+         <i className="fa-solid fa-thumbs-up"></i>
+         <i className="fa-solid fa-thumbs-down"></i>
+
+          <button ><p>Learn More </p></button>
+
+          </div>
+      
+       </div> 
+    
       </div>
-      </div>
+      </Link>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import InfoIcon from '@mui/icons-material/Info';
+
 const Home = () => {
   return (
 
@@ -14,8 +13,8 @@ Starring:Sandra Bullock, Vincent D'Onofrio, Viola Davis</p>
 
 <div className='landing-home-btn'>
 <button>
-<PlayArrowIcon className="icon"/> <h1>Play</h1></button>
-<button><InfoIcon className="icon"/> <h1>More info</h1></button>
+ <h1>Play</h1></button>
+<button> <h1>More info</h1></button>
     </div>
     </div>
     </div> 
