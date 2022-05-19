@@ -6,10 +6,7 @@ const Navbar = ({ addmovie, setsearch }) => {
   return (
     <div className="navbar">
       <div className="left">
-        <img
-          src="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158.png"
-          alt=""
-        />
+        <h1>Popular</h1>
         <ul>
         <Link to="/">
         <li>Home</li>
@@ -43,10 +40,7 @@ const Navbar = ({ addmovie, setsearch }) => {
           onClick={() => setshowinp(!showinp)}
         ></i>
 
-        <img
-          src="https://www.kindpng.com/picc/m/22-223941_transparent-avatar-png-male-avatar-icon-transparent-png.png"
-          alt=""
-        />
+       
       </div>
     </div>
   );

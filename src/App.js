@@ -171,8 +171,8 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-
+      <Navbar setsearch={setsearch} addmovie={addmovie} />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -180,9 +180,16 @@ function App() {
           element={<MovieList movies={movies} search={search} />}
         />
 
+        
+        <Route
+          path="/movies"
+          element={<Navbar setsearch={setsearch} addmovie={addmovie} />}
+        />
+
         <Route path="/movies/:id" element={<MovieDet movies={movies} />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-
+import ReactStars from "react-rating-stars-component";
   
 const MovieCard = ({ movie }) => {
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
   return (
     
 
@@ -9,25 +12,32 @@ const MovieCard = ({ movie }) => {
     <Link to={`/movies/${movie.id}`}>
     
     <div className="cards">
-      
+    
       
        <div className ="photo">
     
        <img src={movie.posterurl} alt="" />
-      
        <div className="info">
+       <span>
+       <ReactStars
+        value={movie.rating}
+          count={5}
+          onChange={ratingChanged}
+          size={24}
+          activeColor="#ffd700"
+        />
+        </span>
+       <button >View Details </button>
+ 
+     
 
+          
+
+       
       
-        <i className="fa-solid fa-circle-play"></i>
-         <i className="fa-solid fa-thumbs-up"></i>
-         <i className="fa-solid fa-thumbs-down"></i>
-
-          <button ><p>Learn More </p></button>
-
-          </div>
-      
+    </div> 
        </div> 
-    
+      
       </div>
       </Link>
   );
